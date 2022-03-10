@@ -12,7 +12,7 @@ def page():
 @app.route('/predict',methods=['POST','GET'])
 @cross_origin()
 def home():
-    if request.methods == 'POST':
+    if request.method == 'POST':
         occ_2 = float(request.form['occ_2'])
         occ_3 = float(request.form['occ_3'])
         occ_4 = float(request.form['occ_4'])
@@ -28,7 +28,7 @@ def home():
         yrs_married = float(request.form['yrs_married'])
         children = float(request.form['children'])
         religious = float(request.form['religious'])
-        educ = float(request.fom['educ'])
+        educ = float(request.form['educ'])
 
         #load modle
         file_name = 'woman affair.pkl'
